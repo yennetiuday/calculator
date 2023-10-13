@@ -1,0 +1,17 @@
+<div>
+    <form #divisionForm="ngForm" (ngSubmit)="calculateDivision()">
+        <label for="inputValue1">Input Value 1:</label>
+        <input type="number" id="inputValue1" name="inputValue1" [(ngModel)]="inputValue1" required
+            (ngModelChange)="onInputChange()" />
+        <br/>
+        <br/>
+        <label for="inputValue2">Input Value 2:</label>
+        <input type="number" id="inputValue2" name="inputValue2" [(ngModel)]="inputValue2" required
+            (ngModelChange)="onInputChange()" />
+        <br/>
+        <br/>
+        <div class="result" *ngIf="showResult">
+            Result: {{ result }}
+        </div>
+    </form>
+</div>
